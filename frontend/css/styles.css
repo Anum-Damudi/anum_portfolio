@@ -1,0 +1,144 @@
+/* Custom Pixel & Utility Styles */
+    :root {
+      --bg: #FAF9F6;
+      --text: #252A27;
+      --border-color: rgba(37, 42, 39, 0.12);
+      --pixel-size: 3px;
+    }
+    .dark {
+      --bg: #131614;
+      --text: #F3F4F3;
+      --border-color: rgba(255, 255, 255, 0.12);
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      overflow-x: hidden;
+    }
+
+    /* Pixelated borders & details */
+    .pixel-corners {
+      box-shadow: 
+        0 -3px 0 0 currentColor,
+        0 3px 0 0 currentColor,
+        -3px 0 0 0 currentColor,
+        3px 0 0 0 currentColor;
+    }
+    .pixel-box {
+      border: 2px solid currentColor;
+      box-shadow: 4px 4px 0px 0px currentColor;
+    }
+    .pixel-box-sm {
+      border: 1.5px solid currentColor;
+      box-shadow: 2px 2px 0px 0px currentColor;
+    }
+    .pixel-box-hover {
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .pixel-box-hover:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px 0px currentColor;
+    }
+
+    /* Dot grid background texture */
+    .bg-dot-pattern {
+      background-image: radial-gradient(rgba(37, 42, 39, 0.14) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .dark .bg-dot-pattern {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    }
+
+    /* Custom Cursor Pixel Trail */
+    .custom-cursor {
+      pointer-events: none;
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: #E76F51;
+      border: 1px solid #252A27;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.04s ease-out;
+      image-rendering: pixelated;
+    }
+    .cursor-particle {
+      position: fixed;
+      width: 5px;
+      height: 5px;
+      pointer-events: none;
+      z-index: 9998;
+      image-rendering: pixelated;
+      animation: fadeOut 0.5s forwards ease-out;
+    }
+    @keyframes fadeOut {
+      0% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(0.2) translateY(8px); }
+    }
+
+    /* Glitch text effect */
+    .glitch-hover:hover {
+      animation: glitchAnim 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    }
+    @keyframes glitchAnim {
+      0% { transform: translate(0) }
+      20% { transform: translate(-2px, 1px); color: #E76F51; }
+      40% { transform: translate(-1px, -1px); color: #88A788; }
+      60% { transform: translate(2px, 1px); color: #F4A261; }
+      80% { transform: translate(1px, -2px); color: #FDE48B; }
+      100% { transform: translate(0) }
+    }
+
+    /* Pixel float animation */
+    @keyframes pixelFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    .animate-float {
+      animation: pixelFloat 3s ease-in-out infinite;
+    }
+
+    /* Kitsune tail wag animation */
+    @keyframes tailSwish {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(-10deg) translateY(-1px); }
+    }
+    .animate-tail {
+      transform-origin: 22px 24px;
+      animation: tailSwish 1.8s ease-in-out infinite;
+    }
+
+    /* Constellation canvas style */
+    #skills-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: auto;
+    }
+
+    /* Project 3D Tilt Card */
+    .project-card {
+      transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.25s ease;
+      transform-style: preserve-3d;
+    }
+
+    /* Speech Bubble tail */
+    .speech-bubble {
+      position: relative;
+    }
+    .speech-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 18px;
+      width: 8px;
+      height: 8px;
+      background: inherit;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg);
+    }

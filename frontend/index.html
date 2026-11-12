@@ -1,0 +1,551 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Anum — Computer Science Student &amp; Developer</title>
+<meta content="Portfolio of Anum: Computer Science student, developer, and creative technologist exploring interactive systems, software engineering, and playful interfaces." name="description">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Press+Start+2P&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="selection:bg-butter/70 dark:selection:bg-sage/40"><div class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#FAF9F6] text-[#252A27] transition-opacity duration-500 font-sans select-none opacity-0 hidden" id="numi-loading-screen" style="display: none; opacity: 1;"><div class="absolute top-6 right-6"><button class="font-pixel text-[10px] px-3.5 py-1.5 rounded-lg border-2 border-charcoal/20 hover:border-charcoal bg-charcoal/5 hover:bg-peach/30 text-charcoal transition-all cursor-pointer flex items-center gap-1.5" id="skip-loader-btn" onclick="skipNumiLoader()"><span>SKIP [ESC]</span><span class="text-xs">⏭</span></button></div><div class="flex flex-col items-center max-w-md w-full px-6 text-center"><div class="relative w-28 h-28 mb-4 flex items-center justify-center"><div class="w-20 h-20 transition-transform duration-300" id="loader-fox-avatar" style="transform: translateY(-16px) scale(1.15);"><svg class="w-full h-full shape-rendering-crispEdges drop-shadow-md" viewBox="0 0 32 32"><ellipse cx="16" cy="29" fill="rgba(37,42,39,0.15)" rx="9" ry="2.5"></ellipse><g id="loader-numi-body"><g class="animate-tail"><path d="M22 17 C26 14 31 16 30 22 C29 26 25 27 22 25 Z" fill="#E76F51" stroke="#2B1E1A" stroke-width="0.8"></path><path d="M24 16 C27 15 29 17 28 20 C26 21 24 20 24 16 Z" fill="#F4A261"></path><polygon fill="#FFFDF9" points="28,17 31,17 30,22 27,21" stroke="#2B1E1A" stroke-width="0.6"></polygon></g><polygon fill="#2B1E1A" points="6,2 12,2 12,10 6,10"></polygon><polygon fill="#F7CAD0" points="7,4 11,4 11,9 7,9"></polygon><polygon fill="#2B1E1A" points="20,2 26,2 26,10 20,10"></polygon><polygon fill="#F7CAD0" points="21,4 25,4 25,9 21,9"></polygon><rect fill="#E76F51" height="16" rx="3" stroke="#252A27" stroke-width="1" width="18" x="7" y="8"></rect><polygon fill="#FFFDF9" points="7,17 12,14 20,14 25,17 24,24 8,24"></polygon><rect fill="#2B1E1A" height="1.5" rx="0.5" width="2" x="15" y="16.5"></rect><rect fill="#F9B497" height="1.5" rx="0.5" width="2" x="8" y="18"></rect><rect fill="#F9B497" height="1.5" rx="0.5" width="2" x="22" y="18"></rect><g id="loader-fox-eyes"><rect fill="#2B1E1A" height="3" rx="0.5" width="2" x="10" y="12.5"></rect><rect fill="#2B1E1A" height="3" rx="0.5" width="2" x="19.5" y="12.5"></rect><rect fill="#FFFDF9" height="1" width="1" x="10.5" y="13"></rect><rect fill="#FFFDF9" height="1" width="1" x="20" y="13"></rect></g><path d="M15 18.5 Q16 20 17 18.5" fill="none" stroke="#2B1E1A" stroke-linecap="round" stroke-width="1"></path><rect fill="#2B1E1A" height="3" rx="1" width="4" x="10" y="24"></rect><rect fill="#2B1E1A" height="3" rx="1" width="4" x="18" y="24"></rect></g></svg></div><span class="absolute -top-1 -right-2 font-pixel text-[9px] bg-butter px-2 py-0.5 rounded border border-charcoal text-charcoal shadow-sm animate-bounce">yip! 🦊</span></div><h2 class="font-heading font-bold text-2xl tracking-tight text-charcoal mb-1">Anum Damudi</h2><p class="font-mono text-xs text-charcoal/60 mb-6">Waking up Kitsune Numi &amp; initializing workspace</p><div class="w-full bg-charcoal/10 border-2 border-charcoal/20 p-1.5 rounded-xl shadow-inner mb-3"><div class="w-full flex items-center gap-1 h-5 overflow-hidden rounded-lg" id="loader-pixel-blocks"><div id="loader-block-0" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(136, 167, 136);"></div><div id="loader-block-1" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(253, 228, 139);"></div><div id="loader-block-2" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(249, 180, 151);"></div><div id="loader-block-3" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(203, 180, 217);"></div><div id="loader-block-4" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(136, 167, 136);"></div><div id="loader-block-5" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(253, 228, 139);"></div><div id="loader-block-6" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(249, 180, 151);"></div><div id="loader-block-7" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(203, 180, 217);"></div><div id="loader-block-8" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(136, 167, 136);"></div><div id="loader-block-9" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(253, 228, 139);"></div><div id="loader-block-10" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(249, 180, 151);"></div><div id="loader-block-11" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(203, 180, 217);"></div><div id="loader-block-12" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(136, 167, 136);"></div><div id="loader-block-13" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(253, 228, 139);"></div><div id="loader-block-14" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(249, 180, 151);"></div><div id="loader-block-15" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(203, 180, 217);"></div><div id="loader-block-16" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(136, 167, 136);"></div><div id="loader-block-17" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(253, 228, 139);"></div><div id="loader-block-18" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(249, 180, 151);"></div><div id="loader-block-19" class="flex-1 h-full rounded-sm bg-charcoal/10 transition-colors duration-100" data-active="true" style="background-color: rgb(203, 180, 217);"></div></div></div><div class="flex items-center justify-between w-full font-pixel text-[10px] text-charcoal/70 mb-4"><span>STATUS: <span class="text-sage font-bold" id="loader-status-label">FOX EXCITED</span></span><span class="text-peach-600 font-bold text-xs" id="loader-percentage">100%</span></div><div class="h-6 flex items-center justify-center font-mono text-xs text-charcoal/80 bg-charcoal/5 px-4 py-1.5 rounded-full border border-charcoal/10"><span id="loader-typewriter-text">Feeding Numi delicious onigiri...</span><span class="animate-pulse text-peach-600 font-bold ml-1">_</span></div></div></div><div class="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden opacity-0 transition-all duration-300 pointer-events-none" id="snack-secret-toast"><div class="pixel-box-sm bg-butter text-charcoal border-2 border-charcoal px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 font-mono text-xs"><span class="text-2xl">🦊🍱</span><div><div class="font-heading font-bold text-xs uppercase text-peach-600">Secret Achievement Unlocked!</div><div class="text-charcoal/80 text-[11px]">You found Numi's secret snack stash! Paws up! You fed little Kitsune Numi delicious onigiri.</div></div></div></div>
+<!-- Custom Cursor Elements -->
+<div class="custom-cursor hidden md:block" id="cursor"></div>
+<!-- Boot-up Loader Screen (Skippable, <1.5s) -->
+<!-- Top Scroll Progress Pixel Indicator -->
+<div class="fixed top-0 left-0 right-0 h-1.5 z-40 bg-transparent">
+<div class="h-full bg-gradient-to-r from-sage via-butter to-peach transition-all duration-75 w-0" id="scroll-progress-bar"></div>
+</div>
+<!-- Navigation Header -->
+<header class="sticky top-0 z-30 backdrop-blur-md bg-ivory/85 dark:bg-darkBg/85 border-b border-charcoal/10 dark:border-white/10 transition-colors">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+<!-- Logo / Wordmark with Kitsune Numi peek badge -->
+<a class="group flex items-center gap-2.5 font-heading text-lg font-bold tracking-tight" href="#hero">
+<div class="w-8 h-8 rounded-md bg-peach/20 dark:bg-peach/30 flex items-center justify-center border border-peach relative overflow-hidden group-hover:bg-peach/40 transition">
+<svg class="w-6 h-6 transform group-hover:scale-110 transition" viewBox="0 0 32 32">
+<!-- Mini Numi Fox face -->
+<polygon fill="#2B1E1A" points="6,3 11,3 11,10 6,10"></polygon>
+<polygon fill="#2B1E1A" points="21,3 26,3 26,10 21,10"></polygon>
+<rect fill="#E76F51" height="15" rx="3" width="18" x="7" y="9"></rect>
+<rect fill="#FFFDF9" height="7" width="5" x="7" y="16"></rect>
+<rect fill="#FFFDF9" height="7" width="5" x="20" y="16"></rect>
+<rect fill="#FFFDF9" height="6" width="8" x="12" y="17"></rect>
+<rect fill="#2B1E1A" height="1.5" width="2" x="15" y="17.5"></rect>
+<rect fill="#2B1E1A" height="3" width="2" x="10" y="13"></rect>
+<rect fill="#2B1E1A" height="3" width="2" x="20" y="13"></rect>
+</svg>
+</div>
+<span class="text-charcoal dark:text-ivory font-semibold">Anum</span>
+</a>
+<!-- Desktop Nav Items -->
+<nav class="hidden md:flex items-center gap-7 text-sm font-medium text-charcoal/80 dark:text-ivory/80"><a class="hover:text-sage transition flex items-center gap-1.5" href="#about"><span class="font-pixel text-[9px] text-sage">01.</span> About</a><a class="hover:text-sage transition flex items-center gap-1.5" href="#projects"><span class="font-pixel text-[9px] text-butter-500">02.</span> Projects</a><a class="hover:text-sage transition flex items-center gap-1.5" href="#skills"><span class="font-pixel text-[9px] text-peach">03.</span> Skills</a><a class="hover:text-sage transition flex items-center gap-1.5" href="#achievements"><span class="font-pixel text-[9px] text-butter-500">04.</span> Badges</a><a class="hover:text-sage transition flex items-center gap-1.5" href="#contact"><span class="font-pixel text-[9px] text-sage">05.</span> Contact</a><a class="hover:text-sage transition flex items-center gap-1.5" href="#upcoming"><span class="font-pixel text-[9px] text-lilac">06.</span> Upcoming</a></nav>
+<!-- Action Toggles -->
+<div class="flex items-center gap-3"><button class="flex items-center gap-1.5 text-xs font-mono px-2.5 py-1.5 rounded border border-charcoal/20 dark:border-white/20 hover:border-charcoal dark:hover:border-white transition bg-charcoal/5 dark:bg-white/5 text-charcoal dark:text-ivory" onclick="replayNumiLoader()" title="Replay retro boot loader"><span class="text-xs">🔄</span><span class="hidden sm:inline">Replay Loader</span></button>
+<!-- Sleep Numi Toggle -->
+<button class="flex items-center gap-1.5 text-xs font-mono px-2.5 py-1.5 rounded border border-charcoal/20 dark:border-white/20 hover:border-charcoal dark:hover:border-white transition bg-charcoal/5 dark:bg-white/5" id="toggle-numi-sleep-btn" onclick="toggleNumiSleep()" title="Send Kitsune Numi to sleep">
+<span id="numi-sleep-icon">🦊💤</span>
+<span class="hidden sm:inline" id="numi-sleep-label">Sleep Fox</span>
+</button>
+<!-- Dark/Light Theme Toggle -->
+<button class="p-2 rounded border border-charcoal/20 dark:border-white/20 hover:border-charcoal dark:hover:border-white transition bg-charcoal/5 dark:bg-white/5 text-charcoal dark:text-ivory" onclick="toggleDarkMode()" title="Toggle Theme">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sun" aria-hidden="true" class="lucide lucide-sun w-4 h-4 hidden dark:block text-butter-400"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="moon" aria-hidden="true" class="lucide lucide-moon w-4 h-4 block dark:hidden text-charcoal"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+</button>
+<!-- Terminal / Konami Hint button -->
+<button class="p-2 text-xs font-pixel rounded bg-peach/20 hover:bg-peach/30 border border-peach text-charcoal dark:text-ivory hidden lg:block" onclick="triggerConfetti()" title="Trigger confetti easter egg">
+          ✨ POP
+        </button>
+</div>
+</div>
+</header>
+<!-- NUMI COMPANION PIXEL COMPONENT (Desktop Floating Kitsune Guide & Mobile Corner Friend) -->
+<aside class="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 flex flex-col items-end pointer-events-none transition-all duration-300 animate-numi-patrol" id="numi-companion">
+<div class="pointer-events-auto flex flex-col items-end group">
+<!-- Numi Speech Bubble with typewriter -->
+<div class="speech-bubble bg-ivory dark:bg-darkSurface border-2 border-charcoal dark:border-ivory px-3.5 py-2 rounded-lg max-w-[210px] text-xs font-mono shadow-md mb-2 transition-all transform origin-bottom-right" id="numi-bubble">
+<span class="text-charcoal dark:text-ivory" id="numi-bubble-text">Kon-kon! I'm Numi your kitsune guide!</span>
+</div>
+<!-- Numi Kitsune Interactive Sprite Host -->
+<div class="w-16 h-16 md:w-18 md:h-18 cursor-pointer filter drop-shadow-lg transition-transform duration-200 hover:scale-110 active:scale-95 relative fox-glowing" id="numi-sprite-container" onclick="numiPokeReaction()" style="transform: rotate(-7deg);" title="Click to pet Kitsune Numi! (Click 3 times for a secret!)">
+<!-- Nightcap indicator perched on left fox ear when dark mode is enabled -->
+<div class="absolute -top-3.5 left-0.5 hidden z-20 pointer-events-none" id="numi-nightcap">
+<svg fill="none" height="22" viewBox="0 0 24 22" width="24">
+<!-- Lilac Sleeping Nightcap curved over pointy ear with butter pompom -->
+<path d="M5 14C3 8 7 3 17 2C19 6 18 13 15 15H5Z" fill="#CBB4D9" stroke="#252A27" stroke-width="1.5"></path>
+<circle cx="17.5" cy="2.5" fill="#FDE48B" r="3" stroke="#252A27" stroke-width="1.5"></circle>
+</svg>
+</div>
+<!-- Dynamic SVG Kitsune Numi Sprite Graphic with multiple poses -->
+<svg class="w-full h-full select-none shape-rendering-crispEdges" id="numi-svg-render" viewBox="0 0 32 32">
+<!-- Shadow -->
+<ellipse cx="16" cy="29" fill="rgba(37,42,39,0.15)" rx="9" ry="2.5"></ellipse>
+<g id="numi-body-group">
+<!-- Fluffy Bushy Kitsune Tail with White Tip (swishes gently) -->
+<g class="animate-tail" id="numi-tail-group" style="transform: none;">
+<path d="M22 17 C26 14 31 16 30 22 C29 26 25 27 22 25 Z" fill="#E76F51" stroke="#2B1E1A" stroke-width="0.8"></path>
+<path d="M24 16 C27 15 29 17 28 20 C26 21 24 20 24 16 Z" fill="#F4A261"></path>
+<!-- Fluffy White Tail Tip -->
+<polygon fill="#FFFDF9" points="28,17 31,17 30,22 27,21" stroke="#2B1E1A" stroke-width="0.6"></polygon>
+</g>
+<!-- Pointy Fox Ears -->
+<!-- Left Ear with dark tip & pink interior -->
+<polygon fill="#2B1E1A" id="numi-ear-l" points="6,2 12,2 12,10 6,10" transform="translate(-1, -1)"></polygon>
+<polygon fill="#F7CAD0" points="7,4 11,4 11,9 7,9"></polygon>
+<!-- Right Ear with dark tip & pink interior -->
+<polygon fill="#2B1E1A" id="numi-ear-r" points="20,2 26,2 26,10 20,10" transform="translate(1, -2)"></polygon>
+<polygon fill="#F7CAD0" points="21,4 25,4 25,9 21,9"></polygon>
+<!-- Main Body & Head: Warm Rust / Amber Fox Fur -->
+<rect fill="#E76F51" height="16" id="numi-torso" rx="3" stroke="#252A27" stroke-width="1" width="18" x="7" y="8"></rect>
+<!-- White / Cream Muzzle & Chest bib -->
+<polygon fill="#FFFDF9" points="7,17 12,14 20,14 25,17 24,24 8,24"></polygon>
+<!-- Tiny Black Fox Nose -->
+<rect fill="#2B1E1A" height="1.5" id="numi-nose" rx="0.5" width="2" x="15" y="16.5"></rect>
+<!-- Peach / Rosy Cheeks -->
+<rect fill="#F9B497" height="1.5" rx="0.5" width="2" x="8" y="18"></rect>
+<rect fill="#F9B497" height="1.5" rx="0.5" width="2" x="22" y="18"></rect>
+<!-- Eyes (Blinking / Expressive) -->
+<g id="numi-eyes">
+<rect fill="#2B1E1A" height="3.5" rx="0.5" width="2.5" x="10" y="12"></rect>
+<rect fill="#2B1E1A" height="3.5" rx="0.5" width="2.5" x="19.5" y="12"></rect>
+<!-- Eye sparkles -->
+<rect fill="#FFFDF9" height="1" width="1" x="10.5" y="12.5"></rect>
+<rect fill="#FFFDF9" height="1" width="1" x="20" y="12.5"></rect>
+</g>
+<!-- Sweet Fox Mouth -->
+<path d="M15 18.5 Q16 20 17 18.5" fill="none" id="numi-mouth" stroke="#2B1E1A" stroke-linecap="round" stroke-width="1"></path>
+<!-- Front Paws with dark charcoal / chocolate tips -->
+<g id="numi-paws-front">
+<rect fill="#E76F51" height="4" id="numi-arm-l" rx="1" stroke="#252A27" stroke-width="0.8" width="3" x="5" y="16"></rect>
+<rect fill="#2B1E1A" height="1.5" id="numi-paw-l-tip" width="3" x="5" y="18.5"></rect>
+<rect fill="#E76F51" height="4" id="numi-arm-r" rx="1" stroke="#252A27" stroke-width="0.8" width="3" x="24" y="16"></rect>
+<rect fill="#2B1E1A" height="1.5" id="numi-paw-r-tip" width="3" x="24" y="18.5"></rect>
+</g>
+<!-- Bottom Paws -->
+<g id="numi-feet">
+<rect fill="#2B1E1A" height="3" id="numi-foot-l" rx="1" width="4" x="10" y="24"></rect>
+<rect fill="#2B1E1A" height="3" id="numi-foot-r" rx="1" width="4" x="18" y="24"></rect>
+</g>
+</g>
+<!-- Sleepy Curled Donut Group (Hidden by default, shown during sleep pose) -->
+<g class="hidden" id="numi-curled-fox">
+<!-- Curled body circle -->
+<circle cx="16" cy="18" fill="#E76F51" r="11" stroke="#2B1E1A" stroke-width="1"></circle>
+<!-- White chest center -->
+<circle cx="16" cy="18" fill="#FFFDF9" r="5"></circle>
+<!-- Wrapped fluffy tail around body -->
+<path d="M7 21 C8 28 24 28 26 21 C27 16 25 11 20 10" fill="none" stroke="#F4A261" stroke-linecap="round" stroke-width="4.5"></path>
+<path d="M23 13 C25 11 20 8 16 8" fill="none" stroke="#FFFDF9" stroke-linecap="round" stroke-width="4"></path>
+<!-- Tucked ear -->
+<polygon fill="#2B1E1A" points="10,9 14,8 13,13"></polygon>
+<polygon fill="#F7CAD0" points="11,10 13,9 12,12"></polygon>
+<!-- Sleeping happy eyes (^ ^) -->
+<path d="M12 16 Q13.5 14.5 15 16" fill="none" stroke="#2B1E1A" stroke-width="1.2"></path>
+<path d="M17 16 Q18.5 14.5 20 16" fill="none" stroke="#2B1E1A" stroke-width="1.2"></path>
+<rect fill="#2B1E1A" height="1" width="1.5" x="15.5" y="17.5"></rect>
+</g>
+</svg>
+<!-- Kitsune Spirit Dot -->
+<div class="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-peach-500 border-2 border-ivory dark:border-darkBg animate-pulse"></div>
+</div>
+<!-- Quick Numi Pose controls drawer (for user test / exploration) -->
+<div class="mt-2 text-[10px] font-mono text-charcoal/60 dark:text-ivory/60 bg-ivory/80 dark:bg-darkSurface/80 p-1.5 rounded border border-charcoal/10 flex gap-1">
+<button class="hover:text-peach-600 px-1" onclick="setNumiPose('trot')">trot</button>
+<button class="hover:text-sage px-1" onclick="setNumiPose('wave')">wave</button>
+<button class="hover:text-butter-500 px-1" onclick="setNumiPose('jump')">jump</button>
+<button class="hover:text-peach px-1" onclick="setNumiPose('curious')">curious</button>
+</div>
+</div>
+</aside>
+<!-- MAIN WRAPPER -->
+<main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-8">
+<!-- 1. HERO SECTION -->
+<section class="min-h-[85vh] flex flex-col justify-center py-16 relative" id="hero">
+<!-- Background subtle decorative grid -->
+<div class="absolute inset-0 bg-dot-pattern opacity-60 pointer-events-none -z-10"></div>
+<!-- Status pill -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-charcoal/15 dark:border-white/15 bg-charcoal/5 dark:bg-white/5 text-xs font-mono mb-8 w-fit">
+<span class="w-2 h-2 rounded-full bg-peach animate-ping"></span>
+<span class="text-charcoal/80 dark:text-ivory/80">Available for Winter 2026 Internships &amp; Collabs</span>
+</div>
+<!-- Main Headline with peek letter & glitch interaction -->
+<div class="relative max-w-4xl">
+<!-- Kitsune Numi Peeking behind letter 'B' of Break or Build -->
+<div class="absolute -top-12 right-28 hidden sm:block animate-float">
+<div class="relative w-14 h-14">
+<svg class="w-full h-full shape-rendering-crispEdges" viewBox="0 0 32 32">
+<!-- Kitsune Fox Peek Sprite -->
+<polygon fill="#2B1E1A" points="6,3 11,3 11,10 6,10"></polygon>
+<polygon fill="#F7CAD0" points="7,5 10,5 10,9 7,9"></polygon>
+<polygon fill="#2B1E1A" points="21,3 26,3 26,10 21,10"></polygon>
+<polygon fill="#F7CAD0" points="22,5 25,5 25,9 22,9"></polygon>
+<!-- Head peeking over edge -->
+<rect fill="#E76F51" height="12" rx="3" width="18" x="7" y="10"></rect>
+<!-- White muzzle -->
+<polygon fill="#FFFDF9" points="8,17 12,14 20,14 24,17 23,22 9,22"></polygon>
+<!-- Nose & Eyes -->
+<rect fill="#2B1E1A" height="1.5" width="2" x="15" y="16.5"></rect>
+<rect fill="#2B1E1A" height="2.5" width="2" x="10" y="13"></rect>
+<rect fill="#2B1E1A" height="2.5" width="2" x="20" y="13"></rect>
+<rect fill="#F9B497" height="1" width="2" x="8" y="17"></rect>
+<rect fill="#F9B497" height="1" width="2" x="22" y="17"></rect>
+<!-- White tail tip swishing up behind -->
+<polygon fill="#FFFDF9" points="25,9 29,8 28,14 25,12"></polygon>
+</svg>
+<span class="absolute -top-3 -right-6 font-pixel text-[8px] bg-peach/90 px-1 py-0.5 rounded text-charcoal border border-charcoal">peek! 🦊</span>
+</div>
+</div>
+<h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-charcoal dark:text-ivory leading-[1.08] mb-6">
+          I'm Anum. I think, experiment, <span class="glitch-hover inline-block cursor-pointer underline decoration-wavy decoration-peach underline-offset-8">break things (sometimes)</span>, and build things.
+        </h1>
+<p class="font-sans text-xl sm:text-2xl text-charcoal/70 dark:text-ivory/70 font-normal max-w-2xl leading-relaxed mb-10">
+          Computer Science Student <span class="text-sage mx-1">|</span> Developer <span class="text-butter-500 mx-1">|</span> Creative Thinker
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="pixel-box-sm bg-sage text-charcoal font-heading font-semibold px-6 py-3.5 rounded flex items-center gap-2 hover:bg-sage/90 transition shadow-sm hover:-translate-y-0.5" href="#projects">
+<span>Explore my work</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-down-right" aria-hidden="true" class="lucide lucide-arrow-down-right w-4 h-4"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg>
+</a>
+<a class="pixel-box-sm bg-ivory dark:bg-darkSurface border border-charcoal/20 dark:border-white/20 font-heading font-semibold px-6 py-3.5 rounded hover:bg-charcoal/5 dark:hover:bg-white/5 transition flex items-center gap-2" href="#about">
+<span>More about me</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" aria-hidden="true" class="lucide lucide-sparkles w-4 h-4 text-butter-500"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+</a>
+<a class="p-3.5 rounded border border-charcoal/20 dark:border-white/20 hover:border-charcoal dark:hover:border-white transition bg-charcoal/5 dark:bg-white/5" href="https://github.com/Anum-Damudi" rel="noopener noreferrer" target="_blank" title="GitHub Profile"><svg class="w-5 h-5 text-charcoal dark:text-ivory" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg></a>
+<a class="p-3.5 rounded border border-charcoal/20 dark:border-white/20 hover:border-charcoal dark:hover:border-white transition bg-charcoal/5 dark:bg-white/5" href="https://www.linkedin.com/in/anum-damudi-bb72b5421/" rel="noopener noreferrer" target="_blank" title="LinkedIn Profile"><svg class="w-5 h-5 text-charcoal dark:text-ivory" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45c-.94 0-1.7.76-1.7 1.7s.76 1.7 1.7 1.7 1.7-.76 1.7-1.7-.76-1.7-1.7-1.7z"></path></svg></a>
+</div>
+<!-- 7. "CURRENTLY" WIDGET (Hero Integration) -->
+<div class="mt-14 pt-8 border-t border-charcoal/10 dark:border-white/10 grid grid-cols-1 md:grid-cols-3 gap-4"><!-- Card 01: Learning -->
+<div class="p-3.5 rounded-lg border border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface flex items-start gap-3 pixel-box-hover">
+<div class="p-2 rounded bg-sage/20 text-sage-800 dark:text-sage font-pixel text-xs">01</div>
+<div>
+<div class="text-[11px] font-mono text-charcoal/50 dark:text-ivory/50 uppercase tracking-wider">Currently Learning</div>
+<div class="text-sm font-semibold text-charcoal dark:text-ivory mt-0.5">Java, DSA &amp; SQL</div>
+<div class="text-xs text-charcoal/60 dark:text-ivory/60 mt-0.5">Strengthening programming fundamentals</div>
+</div>
+</div>
+<!-- Card 02: Building -->
+<div class="p-3.5 rounded-lg border border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface flex items-start gap-3 pixel-box-hover">
+<div class="p-2 rounded bg-butter/30 text-charcoal font-pixel text-xs">02</div>
+<div>
+<div class="text-[11px] font-mono text-charcoal/50 dark:text-ivory/50 uppercase tracking-wider">Currently Building</div>
+<div class="text-sm font-semibold text-charcoal dark:text-ivory mt-0.5">AI &amp; Software Projects</div>
+<div class="text-xs text-charcoal/60 dark:text-ivory/60 mt-0.5">Exploring practical problem-solving</div>
+</div>
+</div>
+<!-- Card 03: Outside the Code -->
+<div class="p-3.5 rounded-lg border border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface flex items-start gap-3 pixel-box-hover">
+<div class="p-2 rounded bg-peach/20 text-peach-600 dark:text-peach font-pixel text-xs">03</div>
+<div>
+<div class="text-[11px] font-mono text-charcoal/50 dark:text-ivory/50 uppercase tracking-wider">Outside the Code</div>
+<div class="text-sm font-semibold text-charcoal dark:text-ivory mt-0.5 flex items-center gap-1.5">
+<span>Crochet, Anime &amp; Japanese</span>
+<span class="inline-block w-2 h-2 rounded-full bg-peach animate-pulse"></span>
+</div>
+<div class="text-xs text-charcoal/60 dark:text-ivory/60 mt-0.5">Creating, exploring and learning</div>
+</div>
+</div></div>
+</section>
+<!-- SECTION DIVIDER -->
+<div class="py-10 flex items-center justify-center gap-3 text-charcoal/30 dark:text-white/30 font-pixel text-xs">
+<span>* * *</span>
+<span class="w-16 h-0.5 bg-current"></span>
+<span>NUMI KITSUNE PROTOCOL</span>
+<span class="w-16 h-0.5 bg-current"></span>
+<span>* * *</span>
+</div>
+<!-- 2. ABOUT & TIMELINE SECTION -->
+<section class="py-16 scroll-mt-20" id="about">
+<div class="flex items-center gap-3 mb-4">
+<span class="font-pixel text-xs text-sage bg-sage/20 px-2 py-1 rounded">SECTION_01</span>
+<h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-charcoal dark:text-ivory">The Journey So Far</h2>
+</div>
+<p class="font-sans text-base sm:text-lg text-charcoal/70 dark:text-ivory/70 max-w-2xl mb-12">From academic curiosity and student leadership to building technology with purpose. Here's a little about how I got here.</p>
+<!-- Timeline with Numi-guided stops -->
+<div class="relative border-l-2 border-dashed border-charcoal/20 dark:border-white/20 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-10"><!-- Milestone 1: 2022-2023 -->
+<div class="relative group">
+<div class="absolute -left-[31px] sm:-left-[47px] top-1 w-6 h-6 rounded-full bg-butter border-2 border-charcoal dark:border-ivory flex items-center justify-center font-pixel text-[8px] text-charcoal shadow-sm">
+    22
+  </div>
+<div class="p-6 rounded-xl border border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface pixel-box-hover relative overflow-hidden">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<span class="text-xs font-mono text-butter-500 font-semibold">2022 – 2023 · THE FOUNDATION</span>
+<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 text-charcoal/70 dark:text-ivory/70">curious_mind.init</span>
+</div>
+<!-- Cute Pixel Fox celebrating with sparkle -->
+<div class="flex items-center gap-1.5 bg-butter/20 border border-butter/30 px-2 py-1 rounded-full text-[10px] font-mono text-charcoal dark:text-ivory">
+<span class="font-pixel text-[9px]">🦊✨</span>
+<span class="font-semibold">academic star!</span>
+</div>
+</div>
+<h3 class="text-lg font-heading font-bold text-charcoal dark:text-ivory mt-1">A curious mind and a strong start</h3>
+<p class="text-sm text-charcoal/70 dark:text-ivory/70 mt-2 leading-relaxed">
+      Built a strong academic foundation, developing an interest in logical thinking, mathematics and problem-solving.
+    </p>
+<div class="mt-4 flex flex-wrap items-center gap-2 text-xs font-mono">
+<span class="px-2.5 py-1 rounded-md bg-butter/30 border border-butter/40 font-semibold text-charcoal">SSLC · 96.8%</span>
+<span class="px-2.5 py-1 rounded-md bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 text-charcoal/80 dark:text-ivory/80">Academic Excellence</span>
+</div>
+</div>
+</div>
+<!-- Milestone 2: 2024-2025 -->
+<div class="relative group">
+<div class="absolute -left-[31px] sm:-left-[47px] top-1 w-6 h-6 rounded-full bg-sage border-2 border-charcoal dark:border-ivory flex items-center justify-center font-pixel text-[8px] text-charcoal shadow-sm">
+    24
+  </div>
+<div class="p-6 rounded-xl border border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface pixel-box-hover relative overflow-hidden">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<span class="text-xs font-mono text-sage font-semibold">2024 – 2025 · LEADERSHIP &amp; GROWTH</span>
+<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 text-charcoal/70 dark:text-ivory/70">leader_mode.exe</span>
+</div>
+<!-- Cute Pixel Fox with salute / sash -->
+<div class="flex items-center gap-1.5 bg-sage/20 border border-sage/30 px-2 py-1 rounded-full text-[10px] font-mono text-charcoal dark:text-ivory">
+<span class="font-pixel text-[9px]">🦊🎖️</span>
+<span class="font-semibold">salute / leader fox</span>
+</div>
+</div>
+<h3 class="text-lg font-heading font-bold text-charcoal dark:text-ivory mt-1">Learning to lead beyond the classroom</h3>
+<p class="text-sm text-charcoal/70 dark:text-ivory/70 mt-2 leading-relaxed">
+      Served as College Captain / Head Girl, balancing academics with responsibilities, teamwork and student leadership.
+    </p>
+<div class="mt-4 flex flex-wrap items-center gap-2 text-xs font-mono">
+<span class="px-2.5 py-1 rounded-md bg-sage/20 border border-sage/40 font-semibold text-sage-800 dark:text-sage">PU · 94.6%</span>
+<span class="px-2.5 py-1 rounded-md bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 text-charcoal/80 dark:text-ivory/80">College Captain / Head Girl</span>
+<span class="px-2.5 py-1 rounded-md bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 text-charcoal/80 dark:text-ivory/80">Eminent Student Award</span>
+</div>
+</div>
+</div>
+<!-- Milestone 3: 2025-2026 -->
+<div class="relative group">
+<div class="absolute -left-[31px] sm:-left-[47px] top-1 w-6 h-6 rounded-full bg-peach border-2 border-charcoal dark:border-ivory flex items-center justify-center font-pixel text-[8px] text-charcoal shadow-sm">
+    25
+  </div>
+<div class="p-6 rounded-xl border border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface pixel-box-hover relative overflow-hidden">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<span class="text-xs font-mono text-peach-600 font-semibold">2025 – 2026 · THE ENGINEERING CHAPTER</span>
+<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 text-charcoal/70 dark:text-ivory/70">always_learning.sh</span>
+</div>
+<!-- Cute Pixel Fox with glasses / book -->
+<div class="flex items-center gap-1.5 bg-peach/20 border border-peach/30 px-2 py-1 rounded-full text-[10px] font-mono text-charcoal dark:text-ivory">
+<span class="font-pixel text-[9px]">🦊📖</span>
+<span class="font-semibold">terminal scholar</span>
+</div>
+</div>
+<h3 class="text-lg font-heading font-bold text-charcoal dark:text-ivory mt-1">Turning curiosity into code</h3>
+<p class="text-sm text-charcoal/70 dark:text-ivory/70 mt-2 leading-relaxed">
+      Began my B.E. journey in Computer Science and Engineering. Explored programming, databases, operating systems and the foundations of software development.
+    </p>
+<div class="mt-4 flex flex-wrap items-center gap-2 text-xs font-mono">
+<span class="px-2.5 py-1 rounded-md bg-peach/20 border border-peach/40 font-semibold text-peach-600 dark:text-peach">B.E. Computer Science</span>
+<span class="px-2.5 py-1 rounded-md bg-peach/10 border border-peach/30 font-semibold text-charcoal dark:text-ivory">9.60 SGPA · Semester 1</span>
+<span class="px-2.5 py-1 rounded-md bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 text-charcoal/80 dark:text-ivory/80">Class Representative</span>
+</div>
+</div>
+</div>
+<!-- Milestone 4: 2026 -->
+<div class="relative group">
+<div class="absolute -left-[31px] sm:-left-[47px] top-1 w-6 h-6 rounded-full bg-lilac border-2 border-charcoal dark:border-ivory flex items-center justify-center font-pixel text-[8px] text-charcoal shadow-sm">
+    26
+  </div>
+<div class="p-6 rounded-xl border border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface pixel-box-hover relative overflow-hidden">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<span class="text-xs font-mono text-lilac font-semibold">2026 · BUILDING WITH PURPOSE</span>
+<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 text-charcoal/70 dark:text-ivory/70">problem_solver.exe</span>
+<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 text-charcoal/70 dark:text-ivory/70">creative_mode.on</span>
+</div>
+<!-- Cute Pixel Fox builder with spanner -->
+<div class="flex items-center gap-1.5 bg-lilac/20 border border-lilac/30 px-2 py-1 rounded-full text-[10px] font-mono text-charcoal dark:text-ivory">
+<span class="font-pixel text-[9px]">🦊🛠️</span>
+<span class="font-semibold">builder kitsune</span>
+</div>
+</div>
+<h3 class="text-lg font-heading font-bold text-charcoal dark:text-ivory mt-1">From learning concepts to creating solutions</h3>
+<p class="text-sm text-charcoal/70 dark:text-ivory/70 mt-2 leading-relaxed">
+      Started exploring practical applications of technology through AI, backend development, data management and collaborative projects.
+    </p>
+<div class="mt-4 space-y-2 text-xs font-mono">
+<div class="p-2.5 rounded-lg bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-peach"></span>
+<span class="font-bold text-charcoal dark:text-ivory">AXIOM · Nexus Crime</span>
+<span class="text-charcoal/50 dark:text-ivory/50">— AI-powered criminal network analysis</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-peach/20 text-peach-600 dark:text-peach text-[11px] font-semibold w-fit">Data, Testing &amp; Product Lead</span>
+</div>
+<div class="p-2.5 rounded-lg bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-sage"></span>
+<span class="font-bold text-charcoal dark:text-ivory">Medi-Link</span>
+<span class="text-charcoal/50 dark:text-ivory/50">— Hackathon Project</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-sage/20 text-sage-800 dark:text-sage text-[11px] font-semibold w-fit">Backend &amp; Data Management</span>
+</div>
+<div class="p-2.5 rounded-lg bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-butter-500"></span>
+<span class="font-bold text-charcoal dark:text-ivory">Face Recognition System</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-butter/30 text-charcoal text-[11px] font-semibold w-fit">Python-based Computer Vision</span>
+</div>
+<div class="p-2.5 rounded-lg bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-1"><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-lilac"></span><span class="font-bold text-charcoal dark:text-ivory">Muna Looms</span><span class="text-charcoal/50 dark:text-ivory/50">— Handmade Crochet Brand Website</span></div><span class="px-2 py-0.5 rounded bg-lilac/30 text-lilac text-[11px] font-semibold w-fit">Creative Tech &amp; E-Commerce</span></div></div>
+</div>
+</div></div>
+</section>
+<!-- SECTION DIVIDER -->
+<div class="py-8 flex items-center justify-center gap-3 text-charcoal/30 dark:text-white/30 font-pixel text-xs">
+<span>* * *</span>
+</div>
+<!-- 3. PROJECTS SECTION (Tilt Cards, Stack Reveal & Pixel Detail Modal) -->
+<section class="py-16 scroll-mt-20" id="projects">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="font-pixel text-xs text-butter-500 bg-butter/20 px-2 py-1 rounded">SECTION_02</span>
+<h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-charcoal dark:text-ivory">Featured Projects</h2>
+</div>
+<p class="font-sans text-base text-charcoal/70 dark:text-ivory/70 max-w-xl">
+            A selection of software, compilers, playful tools, and interactive platforms. Tilt to view, click for details.
+          </p>
+</div>
+<div class="mt-4 md:mt-0 font-mono text-xs text-charcoal/50 dark:text-ivory/50">Showing 4 highlighted builds</div>
+</div>
+<!-- Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div class="project-card rounded-2xl border-2 border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface p-6 flex flex-col justify-between relative group hover:border-peach hover:shadow-xl transition-all" onmouseleave="resetCardTilt(this)" onmousemove="handleCardTilt(event, this)" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px);"><div><div class="flex items-center justify-between text-xs font-mono mb-3"><span class="px-2.5 py-1 rounded bg-peach/20 text-peach-600 dark:text-peach font-medium">AI &amp; Network Analysis</span><span class="text-charcoal/50 dark:text-white/50">2026</span></div><h3 class="font-heading text-xl sm:text-2xl font-bold text-charcoal dark:text-ivory group-hover:text-peach transition flex items-center gap-2">AXIOM · Nexus Crime<svg class="lucide lucide-external-link w-4 h-4 opacity-0 group-hover:opacity-100 transition" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></h3><div class="text-xs font-mono text-peach font-semibold mt-1 mb-2">Data, Testing &amp; Product Lead</div><p class="text-sm text-charcoal/70 dark:text-ivory/70 leading-relaxed">AI-powered criminal network analysis platform that maps interconnected illicit patterns, entities, and multi-source criminal activity to accelerate intelligence pipelines.</p><div class="flex flex-wrap gap-2 mt-5"><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">Python</span><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">NetworkX / Graph AI</span><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">FastAPI</span><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">React</span></div></div><div class="mt-8 pt-4 border-t border-charcoal/10 dark:border-white/10 flex items-center justify-between"><button class="text-xs font-heading font-bold text-charcoal dark:text-ivory hover:text-peach transition flex items-center gap-1.5" onclick="openProjectModal('byteweave')"><span>View Specs</span><svg class="lucide lucide-maximize-2 w-3.5 h-3.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></button><div class="flex items-center gap-2"><a class="text-xs font-mono px-2.5 py-1.5 rounded border border-charcoal/20 dark:border-white/20 hover:border-charcoal dark:hover:border-white transition text-charcoal dark:text-ivory flex items-center gap-1" href="https://github.com/Anum-Damudi/AXIOM.git" rel="noopener noreferrer" target="_blank" title="View Source Code"><i class="w-3.5 h-3.5" data-lucide="github"></i><span>Code</span></a><a class="text-xs font-mono px-3 py-1.5 rounded bg-peach text-charcoal font-semibold hover:bg-peach-600 transition flex items-center gap-1" href="https://axiom-iota-lake.vercel.app" rel="noopener noreferrer" target="_blank"><span>Live Demo</span><span class="text-[10px]">↗</span></a></div></div></div><div class="project-card rounded-2xl border-2 border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface p-6 flex flex-col justify-between relative group hover:border-sage hover:shadow-xl transition-all" onmouseleave="resetCardTilt(this)" onmousemove="handleCardTilt(event, this)" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px);"><div><div class="flex items-center justify-between text-xs font-mono mb-3"><span class="px-2.5 py-1 rounded bg-sage/20 text-sage-800 dark:text-sage font-medium">HealthTech &amp; Systems</span><span class="text-charcoal/50 dark:text-white/50">2025</span></div><h3 class="font-heading text-xl sm:text-2xl font-bold text-charcoal dark:text-ivory group-hover:text-sage transition flex items-center gap-2">Medi-Link<svg class="lucide lucide-external-link w-4 h-4 opacity-0 group-hover:opacity-100 transition" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></h3><div class="text-xs font-mono text-sage-800 dark:text-sage font-semibold mt-1 mb-2">Backend &amp; Data Management — Hackathon</div><p class="text-sm text-charcoal/70 dark:text-ivory/70 leading-relaxed">Scalable healthcare synchronization platform bridging patient medical records, clinic scheduling, and real-time inventory management with reliable offline tolerance.</p><div class="flex flex-wrap gap-2 mt-5"><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">Node.js</span><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">PostgreSQL</span><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">SQL</span><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">REST APIs</span></div></div><div class="mt-8 pt-4 border-t border-charcoal/10 dark:border-white/10 flex items-center justify-between"><button class="text-xs font-heading font-bold text-charcoal dark:text-ivory hover:text-sage transition flex items-center gap-1.5" onclick="openProjectModal('synthflora')"><span>View Specs</span><svg class="lucide lucide-maximize-2 w-3.5 h-3.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></button><div class="flex items-center gap-2"><a class="text-xs font-mono px-2.5 py-1.5 rounded border border-charcoal/20 dark:border-white/20 hover:border-charcoal dark:hover:border-white transition text-charcoal dark:text-ivory flex items-center gap-1" href="https://github.com/Anum-Damudi/MEDI_LINK.git" rel="noopener noreferrer" target="_blank" title="View Source Code"><i class="w-3.5 h-3.5" data-lucide="github"></i><span>Code</span></a></div></div></div><div class="project-card rounded-2xl border-2 border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface p-6 flex flex-col justify-between relative group hover:border-butter-400 hover:shadow-xl transition-all" onmouseleave="resetCardTilt(this)" onmousemove="handleCardTilt(event, this)" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px);"><div><div class="flex items-center justify-between text-xs font-mono mb-3"><span class="px-2.5 py-1 rounded bg-butter/30 text-charcoal font-medium">Computer Vision &amp; ML</span><span class="text-charcoal/50 dark:text-white/50">2025</span></div><h3 class="font-heading text-xl sm:text-2xl font-bold text-charcoal dark:text-ivory group-hover:text-butter-500 transition flex items-center gap-2">Face Recognition System<svg class="lucide lucide-external-link w-4 h-4 opacity-0 group-hover:opacity-100 transition" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></h3><div class="text-xs font-mono text-charcoal/80 dark:text-butter font-semibold mt-1 mb-2">Computer Vision Project</div><p class="text-sm text-charcoal/70 dark:text-ivory/70 leading-relaxed">High-accuracy real-time biometric identification and attendance verification pipeline built using deep learning face embeddings and anti-spoofing validation.</p><div class="flex flex-wrap gap-2 mt-5"><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">Python</span><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">OpenCV</span><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">DeepFace / CNN</span><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">SQLite</span></div></div><div class="mt-8 pt-4 border-t border-charcoal/10 dark:border-white/10 flex items-center justify-between"><button class="text-xs font-heading font-bold text-charcoal dark:text-ivory hover:text-butter-500 transition flex items-center gap-1.5" onclick="openProjectModal('peerpulse')"><span>View Specs</span><svg class="lucide lucide-maximize-2 w-3.5 h-3.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></button><div class="flex items-center gap-2"><a class="text-xs font-mono px-2.5 py-1.5 rounded border border-charcoal/20 dark:border-white/20 hover:border-charcoal dark:hover:border-white transition text-charcoal dark:text-ivory flex items-center gap-1" href="https://github.com/Anum-Damudi/FACE_RECOGNITION_SYSTEM.git" rel="noopener noreferrer" target="_blank" title="View Source Code"><i class="w-3.5 h-3.5" data-lucide="github"></i><span>Code</span></a></div></div></div><div class="project-card rounded-2xl border-2 border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface p-6 flex flex-col justify-between relative group hover:border-lilac hover:shadow-xl transition-all" onmouseleave="resetCardTilt(this)" onmousemove="handleCardTilt(event, this)" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px);"><div><div class="flex items-center justify-between text-xs font-mono mb-3"><span class="px-2.5 py-1 rounded bg-lilac/30 text-lilac font-medium">Creative Tech &amp; E-Commerce</span><span class="text-charcoal/50 dark:text-white/50">2026</span></div><h3 class="font-heading text-xl sm:text-2xl font-bold text-charcoal dark:text-ivory group-hover:text-lilac transition flex items-center gap-2">Muna Looms — Brand Website<svg class="lucide lucide-external-link w-4 h-4 opacity-0 group-hover:opacity-100 transition" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></h3><div class="text-xs font-mono text-lilac font-semibold mt-1 mb-2">Handmade Crochet Brand &amp; Digital Storefront</div><p class="text-sm text-charcoal/70 dark:text-ivory/70 leading-relaxed">Developing a website for my handmade crochet business, bringing products, creativity and digital experiences together.</p><div class="flex flex-wrap gap-2 mt-5"><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">React</span><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">Tailwind CSS</span><span class="text-xs font-mono px-2 py-1 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">Framer Motion</span></div></div><div class="mt-8 pt-4 border-t border-charcoal/10 dark:border-white/10 flex items-center justify-between"><button class="text-xs font-heading font-bold text-charcoal dark:text-ivory hover:text-lilac transition flex items-center gap-1.5" onclick="openProjectModal('pixelquest')"><span>View Specs</span><svg class="lucide lucide-maximize-2 w-3.5 h-3.5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></button><div class="flex items-center gap-2"><a class="text-xs font-mono px-2.5 py-1.5 rounded border border-charcoal/20 dark:border-white/20 hover:border-charcoal dark:hover:border-white transition text-charcoal dark:text-ivory flex items-center gap-1" href="https://github.com/Anum-Damudi/muna_looms.git" rel="noopener noreferrer" target="_blank" title="View Source Code"><i class="w-3.5 h-3.5" data-lucide="github"></i><span>Code</span></a></div></div></div></div>
+</section>
+<!-- 4. SKILLS CONSTELLATION SECTION (Interactive Dynamic Pixel Node Grid) -->
+<section class="py-16 scroll-mt-20" id="skills">
+<div class="flex items-center gap-3 mb-2">
+<span class="font-pixel text-xs text-peach bg-peach/20 px-2 py-1 rounded">SECTION_03</span>
+<h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-charcoal dark:text-ivory">Skill Constellation</h2>
+</div>
+<p class="font-sans text-base text-charcoal/70 dark:text-ivory/70 max-w-xl mb-8">
+        Hover over nodes to illuminate connections across languages, frameworks, systems, and creative tools.
+      </p>
+<!-- Interactive Canvas Constellation container -->
+<div class="relative w-full h-[420px] rounded-2xl border-2 border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface overflow-hidden p-4"><div class="absolute top-4 left-4 z-20 flex flex-wrap items-center gap-2 text-xs font-mono"><button class="px-2.5 py-1 rounded border border-charcoal/20 dark:border-white/20 bg-charcoal/10 dark:bg-white/10 font-bold text-charcoal dark:text-ivory transition hover:scale-105" id="btn-filter-all" onclick="filterConstellation('all')">All Nodes</button><button class="px-2.5 py-1 rounded border border-sage/40 bg-sage/20 text-sage-800 dark:text-sage font-semibold transition hover:scale-105" id="btn-filter-core" onclick="filterConstellation('core')">● Core CS &amp; Systems</button><button class="px-2.5 py-1 rounded border border-butter/40 bg-butter/30 text-charcoal dark:text-butter font-semibold transition hover:scale-105" id="btn-filter-frontend" onclick="filterConstellation('frontend')">● Frontend &amp; UI</button><button class="px-2.5 py-1 rounded border border-peach/40 bg-peach/25 text-peach-600 dark:text-peach font-semibold transition hover:scale-105" id="btn-filter-backend" onclick="filterConstellation('backend')">● Backend &amp; Cloud</button><button class="px-2.5 py-1 rounded border border-lilac/40 bg-lilac/30 text-lilac font-semibold transition hover:scale-105" id="btn-filter-creative" onclick="filterConstellation('creative')">● Creative Tech</button></div><canvas class="w-full h-full cursor-crosshair" id="skills-canvas"></canvas><div class="absolute pointer-events-none opacity-0 transition-opacity duration-150 z-30 bg-ivory dark:bg-darkBg border-2 border-charcoal dark:border-ivory px-3 py-2 rounded-xl shadow-xl font-mono text-xs max-w-xs -translate-x-1/2 -translate-y-12" id="constellation-tooltip"><div class="font-heading font-bold text-sm text-charcoal dark:text-ivory" id="tooltip-name">Skill</div><div class="text-[10px] text-sage font-semibold uppercase" id="tooltip-cat">Category</div><div class="text-[11px] text-charcoal/80 dark:text-ivory/80 mt-1" id="tooltip-detail">Details</div></div><div class="absolute bottom-4 right-4 z-10 text-[11px] font-mono text-charcoal/50 dark:text-ivory/50 flex items-center gap-1 bg-ivory/80 dark:bg-darkSurface/80 px-2.5 py-1 rounded-md border border-charcoal/10 dark:border-white/10"><span>🦊 Move cursor to attract nodes • Click category to isolate</span></div></div>
+</section>
+<!-- 5. EXPERIMENTS & THE PLAYFUL LAB -->
+<!-- 6. ACHIEVEMENTS & UNLOCKABLE PIXEL BADGES -->
+<section class="py-16 scroll-mt-20" id="achievements"><div class="flex flex-wrap items-center gap-2 mb-3"><span class="font-pixel text-xs text-butter-500 bg-butter/20 border border-butter/30 px-2 py-1 rounded">SECTION_04 · UNLOCKABLE BADGES / ACHIEVEMENTS · MILESTONES · LITTLE WINS</span></div><div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8"><div><h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-charcoal dark:text-ivory">Little wins, big milestones.</h2><p class="font-sans text-base text-charcoal/70 dark:text-ivory/70 max-w-xl mt-2">Every achievement tells a story. Here's a collection of milestones, skills and experiences I've picked up along the way.</p></div><div class="p-3 rounded-xl border border-charcoal/15 dark:border-white/10 bg-ivory/80 dark:bg-darkSurface/80 flex items-center gap-2.5 max-w-sm"><span class="text-xl animate-pulse">🦊✨</span><p class="text-xs font-mono text-charcoal/80 dark:text-ivory/80">"Achievement unlocked! ✨ Every little step counts. Keep going!"</p></div></div><div class="p-4 mb-8 rounded-2xl border-2 border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface pixel-box-sm"><div class="flex items-center justify-between font-mono text-xs mb-2"><div class="flex items-center gap-2"><span class="font-pixel text-[10px] text-peach">QUEST PROGRESS</span><span class="text-charcoal/60 dark:text-ivory/60">• Milestones completed</span></div><span class="font-bold text-peach-600 dark:text-peach">5 / 8 Unlocked (62%)</span></div><div class="w-full h-3 rounded-full bg-charcoal/10 dark:bg-white/10 overflow-hidden"><div class="h-full bg-gradient-to-r from-butter via-peach to-sage w-1/2 transition-all duration-500" style="width: 62.5%;"></div></div></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"><div class="p-5 rounded-2xl border-2 border-butter bg-butter/10 dark:bg-butter/20 relative group pixel-box-hover cursor-pointer"><div class="flex items-center justify-between mb-3"><div class="w-10 h-10 rounded-lg bg-butter flex items-center justify-center text-xl shadow-sm group-hover:scale-110 transition">🏆</div><span class="font-pixel text-[9px] px-2 py-0.5 rounded bg-butter text-charcoal font-bold">UNLOCKED</span></div><h4 class="font-heading font-bold text-sm text-charcoal dark:text-ivory">Academic Achiever</h4><p class="text-xs font-mono text-charcoal/70 dark:text-ivory/70 mt-1">9.60 first-semester SGPA</p></div><div class="p-5 rounded-2xl border-2 border-sage bg-sage/10 dark:bg-sage/20 relative group pixel-box-hover cursor-pointer"><div class="flex items-center justify-between mb-3"><div class="w-10 h-10 rounded-lg bg-sage flex items-center justify-center text-xl shadow-sm group-hover:scale-110 transition">👑</div><span class="font-pixel text-[9px] px-2 py-0.5 rounded bg-sage text-charcoal font-bold">UNLOCKED</span></div><h4 class="font-heading font-bold text-sm text-charcoal dark:text-ivory">Natural Leader</h4><p class="text-xs font-mono text-charcoal/70 dark:text-ivory/70 mt-1">Student leadership experience</p></div><div class="p-5 rounded-2xl border-2 border-peach bg-peach/10 dark:bg-peach/20 relative group pixel-box-hover cursor-pointer"><div class="flex items-center justify-between mb-3"><div class="w-10 h-10 rounded-lg bg-peach flex items-center justify-center text-xl shadow-sm group-hover:scale-110 transition">🧶</div><span class="font-pixel text-[9px] px-2 py-0.5 rounded bg-peach text-charcoal font-bold">UNLOCKED</span></div><h4 class="font-heading font-bold text-sm text-charcoal dark:text-ivory">Creative Entrepreneur</h4><p class="text-xs font-mono text-charcoal/70 dark:text-ivory/70 mt-1">Started Muna Looms</p></div><div class="p-5 rounded-2xl border-2 border-lilac bg-lilac/10 dark:bg-lilac/20 relative group pixel-box-hover cursor-pointer"><div class="flex items-center justify-between mb-3"><div class="w-10 h-10 rounded-lg bg-lilac flex items-center justify-center text-xl shadow-sm group-hover:scale-110 transition">🤖</div><span class="font-pixel text-[9px] px-2 py-0.5 rounded bg-lilac text-charcoal font-bold">UNLOCKED</span></div><h4 class="font-heading font-bold text-sm text-charcoal dark:text-ivory">AI Explorer</h4><p class="text-xs font-mono text-charcoal/70 dark:text-ivory/70 mt-1">Exploring AI &amp; computer vision</p></div><div class="p-5 rounded-2xl border-2 border-sage-500 bg-sage/15 dark:bg-sage/20 relative group pixel-box-hover cursor-pointer"><div class="flex items-center justify-between mb-3"><div class="w-10 h-10 rounded-lg bg-sage flex items-center justify-center text-xl shadow-sm group-hover:scale-110 transition">🚀</div><span class="font-pixel text-[9px] px-2 py-0.5 rounded bg-sage text-charcoal font-bold">UNLOCKED</span></div><h4 class="font-heading font-bold text-sm text-charcoal dark:text-ivory">First Deployment</h4><p class="text-xs font-mono text-charcoal/70 dark:text-ivory/70 mt-1">Launch a personal project</p><div class="mt-3 pt-2 border-t border-charcoal/10 dark:border-white/10 text-[10px] font-mono text-sage font-semibold flex items-center gap-1"><span>Status: Shipped to production ✨</span></div></div><div class="p-5 rounded-2xl border-2 border-dashed border-charcoal/20 dark:border-white/20 bg-charcoal/5 dark:bg-white/5 relative group opacity-75 hover:opacity-100 transition"><div class="flex items-center justify-between mb-3"><div class="w-10 h-10 rounded-lg bg-charcoal/10 dark:bg-white/10 flex items-center justify-center text-xl text-charcoal/50 dark:text-ivory/50">🔒</div><span class="font-pixel text-[9px] px-2 py-0.5 rounded border border-charcoal/20 text-charcoal/50 dark:text-ivory/50 font-bold">LOCKED</span></div><h4 class="font-heading font-bold text-sm text-charcoal/80 dark:text-ivory/80">Open Source Contributor</h4><p class="text-xs font-mono text-charcoal/60 dark:text-ivory/60 mt-1">Make a public contribution</p><div class="mt-3 pt-2 border-t border-charcoal/10 dark:border-white/10 text-[10px] font-mono text-sage font-semibold flex items-center gap-1"><span>Condition:</span><span>1st merged PR</span></div></div><div class="p-5 rounded-2xl border-2 border-dashed border-charcoal/20 dark:border-white/20 bg-charcoal/5 dark:bg-white/5 relative group opacity-75 hover:opacity-100 transition"><div class="flex items-center justify-between mb-3"><div class="w-10 h-10 rounded-lg bg-charcoal/10 dark:border-white/10 flex items-center justify-center text-xl text-charcoal/50 dark:text-ivory/50">🔒</div><span class="font-pixel text-[9px] px-2 py-0.5 rounded border border-charcoal/20 text-charcoal/50 dark:text-ivory/50 font-bold">LOCKED</span></div><h4 class="font-heading font-bold text-sm text-charcoal/80 dark:text-ivory/80">DSA Challenger</h4><p class="text-xs font-mono text-charcoal/60 dark:text-ivory/60 mt-1">Build a consistent problem-solving practice</p><div class="mt-3 pt-2 border-t border-charcoal/10 dark:border-white/10 text-[10px] font-mono text-butter-500 font-semibold flex items-center gap-1"><span>Condition:</span><span>50+ DSA solved</span></div></div><div class="p-5 rounded-2xl border-2 border-dashed border-charcoal/20 dark:border-white/20 bg-charcoal/5 dark:bg-white/5 relative group opacity-75 hover:opacity-100 transition"><div class="flex items-center justify-between mb-3"><div class="w-10 h-10 rounded-lg bg-charcoal/10 dark:bg-white/10 flex items-center justify-center text-xl text-charcoal/50 dark:text-ivory/50">🔒</div><span class="font-pixel text-[9px] px-2 py-0.5 rounded border border-charcoal/20 text-charcoal/50 dark:text-ivory/50 font-bold">LOCKED</span></div><h4 class="font-heading font-bold text-sm text-charcoal/80 dark:text-ivory/80">Internship Unlocked</h4><p class="text-xs font-mono text-charcoal/60 dark:text-ivory/60 mt-1">Land your first internship</p><div class="mt-3 pt-2 border-t border-charcoal/10 dark:border-white/10 text-[10px] font-mono text-lilac font-semibold flex items-center gap-1"><span>Condition:</span><span>Winter 2026 offer</span></div></div></div></section>
+<!-- 8. CONTACT & GET IN TOUCH (Kitsune Numi Carrier) -->
+<section class="py-16 scroll-mt-20" id="contact">
+<div class="p-8 sm:p-12 rounded-3xl border-2 border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface relative overflow-hidden">
+<div class="flex flex-col lg:flex-row gap-10 items-start justify-between">
+<div class="max-w-xl">
+<div class="flex items-center gap-3 mb-2">
+<span class="font-pixel text-xs text-sage bg-sage/20 px-2 py-1 rounded">SECTION_05</span>
+<span class="font-mono text-xs text-charcoal/50 dark:text-ivory/50">STATION_END</span>
+</div>
+<h2 class="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-charcoal dark:text-ivory leading-tight">
+              We've made it! Say hello!
+            </h2>
+<p class="font-sans text-base text-charcoal/70 dark:text-ivory/70 mt-4 leading-relaxed">
+              Whether you have an internship opportunity, a cool open-source project to build together, or just want to chat about compilers, cute foxes, and chiptunes—my inbox is wide open.
+            </p>
+<!-- Social links & CV Download -->
+<div class="flex flex-wrap items-center gap-4 mt-8">
+<a class="pixel-box-sm bg-sage text-charcoal font-heading font-bold px-6 py-3 rounded flex items-center gap-2 hover:bg-sage-600 transition" href="mailto:damudianum@gmail.com?subject=Hello%20Anum!">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" aria-hidden="true" class="lucide lucide-mail w-4 h-4"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+<span>damudianum@gmail.com</span>
+</a>
+<a class="pixel-box-sm bg-butter text-charcoal font-heading font-bold px-5 py-3 rounded flex items-center gap-2 hover:bg-butter-500 transition" href="#download-cv" onclick="alert('TODO: Anum will link her PDF Resume / CV here!'); return false;">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" aria-hidden="true" class="lucide lucide-file-text w-4 h-4"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+<span>Download CV</span>
+</a>
+</div>
+<div class="flex items-center gap-4 mt-6 text-charcoal/70 dark:text-ivory/70 text-sm font-mono"><a class="hover:text-sage transition flex items-center gap-1.5" href="https://github.com/Anum-Damudi" rel="noopener noreferrer" target="_blank"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg><span>GitHub</span></a><span>•</span><a class="hover:text-butter-500 transition flex items-center gap-1.5" href="https://www.linkedin.com/in/anum-damudi-bb72b5421/" rel="noopener noreferrer" target="_blank"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45c-.94 0-1.7.76-1.7 1.7s.76 1.7 1.7 1.7 1.7-.76 1.7-1.7-.76-1.7-1.7-1.7z"></path></svg><span>LinkedIn</span></a></div>
+</div>
+<!-- Contact Interactive Form -->
+<div class="w-full lg:max-w-md bg-ivory/80 dark:bg-darkBg/80 p-6 rounded-2xl border border-charcoal/15 dark:border-white/10">
+<form class="space-y-4" onsubmit="handleContactSubmit(event)">
+<div>
+<label class="block text-xs font-mono uppercase text-charcoal/70 dark:text-ivory/70 mb-1">Your Name</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg border border-charcoal/20 dark:border-white/20 bg-ivory dark:bg-darkSurface text-charcoal dark:text-ivory text-sm focus:border-sage focus:outline-none transition" placeholder="Ada Lovelace" required="" type="text">
+</div>
+<div>
+<label class="block text-xs font-mono uppercase text-charcoal/70 dark:text-ivory/70 mb-1">Your Email</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg border border-charcoal/20 dark:border-white/20 bg-ivory dark:bg-darkSurface text-charcoal dark:text-ivory text-sm focus:border-sage focus:outline-none transition" placeholder="ada@analytical-engine.org" required="" type="email">
+</div>
+<div>
+<label class="block text-xs font-mono uppercase text-charcoal/70 dark:text-ivory/70 mb-1">Message</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-lg border border-charcoal/20 dark:border-white/20 bg-ivory dark:bg-darkSurface text-charcoal dark:text-ivory text-sm focus:border-sage focus:outline-none transition" placeholder="Hey Anum, let's build something awesome..." required="" rows="3"></textarea>
+</div>
+<button class="w-full pixel-box-sm bg-charcoal text-ivory dark:bg-ivory dark:text-charcoal font-heading font-bold py-3 rounded hover:bg-peach hover:text-charcoal transition flex items-center justify-center gap-2" type="submit">
+<span>Send via Fox Carrier Numi</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" aria-hidden="true" class="lucide lucide-send w-4 h-4"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+</button>
+</form>
+<div class="mt-3 text-center text-xs font-mono text-peach hidden flex items-center justify-center gap-1.5" id="contact-status">
+<span>🦊💌</span>
+<span>Kitsune Numi took your letter safely to Anum's desk!</span>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-16 scroll-mt-20 border-t border-charcoal/10 dark:border-white/10" id="upcoming"><div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10"><div><div class="flex items-center gap-3 mb-2"><span class="font-pixel text-xs text-lilac bg-lilac/20 border border-lilac/30 px-2 py-1 rounded">SECTION_06</span><span class="font-mono text-xs text-charcoal/50 dark:text-ivory/50 uppercase tracking-wider">UPCOMING PROJECTS · IDEAS IN PROGRESS</span></div><h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-charcoal dark:text-ivory">What's cooking in my development lab?</h2><p class="font-sans text-base text-charcoal/70 dark:text-ivory/70 max-w-2xl mt-2">Not every idea is built yet. Here are three projects I'm excited to bring to life.</p></div><div class="p-3 rounded-xl border border-charcoal/15 dark:border-white/10 bg-ivory/80 dark:bg-darkSurface/80 flex items-center gap-2.5 max-w-sm"><span class="text-xl animate-bounce">🦊🔬</span><p class="text-xs font-mono text-charcoal/80 dark:text-ivory/80"><span class="text-lilac font-bold">Numi says:</span> "Curious ideas brewing! The best software starts with a bold sketch!"</p></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="rounded-2xl border-2 border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface p-6 flex flex-col justify-between pixel-box-hover group relative overflow-hidden"><div class="absolute -top-3.5 -right-3.5 w-12 h-12 bg-peach/20 rounded-full flex items-center justify-center"><span class="text-sm">🎲</span></div><div><div class="flex items-center justify-between text-xs font-mono mb-3"><span class="px-2 py-0.5 rounded bg-peach/20 text-peach-600 dark:text-peach font-semibold text-[10px]">Game Design &amp; Sockets</span><span class="text-charcoal/50 dark:text-white/50 text-[10px]">Q2 2026</span></div><h3 class="font-heading text-lg font-bold text-charcoal dark:text-ivory group-hover:text-peach transition">Dungeon — The Mafia Game</h3><p class="text-xs text-charcoal/70 dark:text-ivory/70 mt-2 leading-relaxed">An interactive multiplayer social deduction game. Players assume secret dungeon roles, strategize night phase deceptions, and vote out impostors via real-time WebSocket lobbies.</p><div class="mt-4 pt-3 border-t border-charcoal/10 dark:border-white/10"><div class="text-[10px] font-mono text-charcoal/50 dark:text-ivory/50 uppercase tracking-wider mb-1.5">Lifecycle Progress:</div><div class="flex items-center gap-1.5 text-[10px] font-mono font-bold"><span class="px-2 py-0.5 rounded bg-peach text-charcoal shadow-sm">IDEA</span><span class="text-charcoal/40 dark:text-white/40">→</span><span class="px-2 py-0.5 rounded border border-charcoal/20 dark:border-white/20 text-charcoal/60 dark:text-ivory/60">DEVELOPMENT</span><span class="text-charcoal/40 dark:text-white/40">→</span><span class="px-2 py-0.5 rounded border border-charcoal/20 dark:border-white/20 text-charcoal/40 dark:text-ivory/40">LAUNCH</span></div></div><div class="flex flex-wrap gap-1.5 mt-4"><span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">WebSockets</span><span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">React</span><span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">Node.js</span></div></div><details class="mt-4 pt-3 border-t border-charcoal/10 dark:border-white/10 group-open:pb-1"><summary class="text-xs font-mono text-peach font-semibold cursor-pointer select-none hover:underline flex items-center justify-between"><span>View Planned Specs</span><span class="text-[10px]">▼</span></summary><p class="mt-2 text-[11px] font-mono text-charcoal/80 dark:text-ivory/80 leading-relaxed bg-charcoal/5 dark:bg-white/5 p-2.5 rounded-lg border border-charcoal/10 dark:border-white/10">• Lobby code generation &amp; low-latency event broadcasting<br>• Custom role distribution engine with hidden state masks<br>• Real-time countdown timers and voting ballot tallying</p></details></div><div class="rounded-2xl border-2 border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface p-6 flex flex-col justify-between pixel-box-hover group relative overflow-hidden"><div class="absolute -top-3.5 -right-3.5 w-12 h-12 bg-sage/20 rounded-full flex items-center justify-center"><span class="text-sm">🥗</span></div><div><div class="flex items-center justify-between text-xs font-mono mb-3"><span class="px-2 py-0.5 rounded bg-sage/20 text-sage-800 dark:text-sage font-semibold text-[10px]">HealthTech &amp; Mobile</span><span class="text-charcoal/50 dark:text-white/50 text-[10px]">Q3 2026</span></div><h3 class="font-heading text-lg font-bold text-charcoal dark:text-ivory group-hover:text-sage transition">BMI &amp; Health Companion</h3><p class="text-xs text-charcoal/70 dark:text-ivory/70 mt-2 leading-relaxed">An aesthetic, privacy-first wellness dashboard tracking body composition metrics, personalized nutritional goals, and habit streaks with local-first offline storage.</p><div class="mt-4 pt-3 border-t border-charcoal/10 dark:border-white/10"><div class="text-[10px] font-mono text-charcoal/50 dark:text-ivory/50 uppercase tracking-wider mb-1.5">Lifecycle Progress:</div><div class="flex items-center gap-1.5 text-[10px] font-mono font-bold"><span class="px-2 py-0.5 rounded bg-sage/30 text-sage-800 dark:text-sage">IDEA</span><span class="text-charcoal/40 dark:text-white/40">→</span><span class="px-2 py-0.5 rounded bg-sage text-charcoal shadow-sm">DEVELOPMENT</span><span class="text-charcoal/40 dark:text-white/40">→</span><span class="px-2 py-0.5 rounded border border-charcoal/20 dark:border-white/20 text-charcoal/40 dark:text-ivory/40">LAUNCH</span></div></div><div class="flex flex-wrap gap-1.5 mt-4"><span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">TypeScript</span><span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">Tailwind CSS</span><span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">IndexedDB</span></div></div><details class="mt-4 pt-3 border-t border-charcoal/10 dark:border-white/10 group-open:pb-1"><summary class="text-xs font-mono text-sage font-semibold cursor-pointer select-none hover:underline flex items-center justify-between"><span>View Planned Specs</span><span class="text-[10px]">▼</span></summary><p class="mt-2 text-[11px] font-mono text-charcoal/80 dark:text-ivory/80 leading-relaxed bg-charcoal/5 dark:bg-white/5 p-2.5 rounded-lg border border-charcoal/10 dark:border-white/10">• Client-side metric visualization with SVG trend graphs<br>• Smart hydration &amp; micronutrient milestone checklists<br>• 100% telemetry-free encrypted local browser cache</p></details></div><div class="rounded-2xl border-2 border-charcoal/15 dark:border-white/10 bg-ivory dark:bg-darkSurface p-6 flex flex-col justify-between pixel-box-hover group relative overflow-hidden"><div class="absolute -top-3.5 -right-3.5 w-12 h-12 bg-butter/30 rounded-full flex items-center justify-center"><span class="text-sm">🏛️</span></div><div><div class="flex items-center justify-between text-xs font-mono mb-3"><span class="px-2 py-0.5 rounded bg-butter/30 text-charcoal font-semibold text-[10px]">Enterprise &amp; Ops</span><span class="text-charcoal/50 dark:text-white/50 text-[10px]">Q3 2026</span></div><h3 class="font-heading text-lg font-bold text-charcoal dark:text-ivory group-hover:text-butter-500 transition">Community Hall Management</h3><p class="text-xs text-charcoal/70 dark:text-ivory/70 mt-2 leading-relaxed">Full-stack booking and calendar synchronization suite for public venue reservations, amenity scheduling, deposit accounting, and automated invoice dispatching.</p><div class="mt-4 pt-3 border-t border-charcoal/10 dark:border-white/10"><div class="text-[10px] font-mono text-charcoal/50 dark:text-ivory/50 uppercase tracking-wider mb-1.5">Lifecycle Progress:</div><div class="flex items-center gap-1.5 text-[10px] font-mono font-bold"><span class="px-2 py-0.5 rounded bg-butter text-charcoal shadow-sm">IDEA</span><span class="text-charcoal/40 dark:text-white/40">→</span><span class="px-2 py-0.5 rounded border border-charcoal/20 dark:border-white/20 text-charcoal/60 dark:text-ivory/60">DEVELOPMENT</span><span class="text-charcoal/40 dark:text-white/40">→</span><span class="px-2 py-0.5 rounded border border-charcoal/20 dark:border-white/20 text-charcoal/40 dark:text-ivory/40">LAUNCH</span></div></div><div class="flex flex-wrap gap-1.5 mt-4"><span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">PostgreSQL</span><span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">Express</span><span class="text-[10px] font-mono px-2 py-0.5 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10">React</span></div></div><details class="mt-4 pt-3 border-t border-charcoal/10 dark:border-white/10 group-open:pb-1"><summary class="text-xs font-mono text-butter-500 font-semibold cursor-pointer select-none hover:underline flex items-center justify-between"><span>View Planned Specs</span><span class="text-[10px]">▼</span></summary><p class="mt-2 text-[11px] font-mono text-charcoal/80 dark:text-ivory/80 leading-relaxed bg-charcoal/5 dark:bg-white/5 p-2.5 rounded-lg border border-charcoal/10 dark:border-white/10">• ACID conflict-free double-booking reservation guards<br>• Dynamic pricing rules based on seasonal demand &amp; hours<br>• PDF receipt rendering &amp; SMS confirmation webhook alerts</p></details></div></div></section>
+<!-- 9. CUSTOM 404 & PIXEL JUMP MINI-GAME PREVIEW (NUMI FOX RUNNER) -->
+<section class="py-12 border-t border-charcoal/10 dark:border-white/10" id="custom-404-preview"><div class="p-6 sm:p-8 rounded-3xl border-2 border-charcoal/15 dark:border-white/10 bg-ivory/80 dark:bg-darkSurface/80 flex flex-col lg:flex-row items-center justify-between gap-8"><div class="max-w-md"><div><div class="flex items-center gap-2 text-xs font-pixel text-peach mb-1"><span>[EASTER_EGG_ARENA]</span></div><h3 class="font-heading text-2xl font-bold text-charcoal dark:text-ivory">404 Mini-Game Sandbox: Numi Kitsune Leap</h3><p class="text-xs sm:text-sm text-charcoal/70 dark:text-ivory/70 mt-2 leading-relaxed">Built as the custom fallback route for missing pages. Press <span class="font-mono font-bold text-peach-600 dark:text-peach bg-peach/20 px-1.5 py-0.5 rounded">SPACE</span>, click, or tap to make little Kitsune Numi leap over pixel bugs, rogue pointers, and syntax errors!</p><div class="flex items-center gap-3 mt-4 text-xs font-mono"><span class="flex items-center gap-1 text-sage font-bold"><span>🏆 Best:</span><span id="game-high-score">0</span></span><span class="text-charcoal/30 dark:text-white/30">•</span><span class="text-charcoal/60 dark:text-ivory/60">Sound effects &amp; tail particles active</span></div><div class="mt-4 space-y-3"><div class="flex flex-wrap items-center gap-2"><button class="pixel-box-sm bg-peach text-charcoal font-heading font-bold text-xs px-4 py-2 rounded hover:bg-peach-600 transition flex items-center gap-1.5 cursor-pointer" id="runner-action-btn" onclick="resetOrStartRunner()"><span>▶ Start Leap Run</span></button><button class="pixel-box-sm bg-ivory dark:bg-darkBg border border-charcoal/20 dark:border-white/20 font-mono text-xs px-3.5 py-2 rounded hover:bg-charcoal/5 dark:hover:bg-white/5 transition cursor-pointer active:scale-95" id="runner-jump-btn" onclick="jumpNumiMiniGame()">Jump [Space]</button></div><div class="flex flex-wrap items-center gap-1.5 pt-1"><span class="text-[10px] font-mono uppercase tracking-wider text-charcoal/50 dark:text-ivory/50 mr-1">Mode:</span><button class="px-2 py-0.5 rounded border border-sage/40 bg-sage/20 text-sage-800 dark:text-sage font-mono text-xs font-semibold hover:scale-105 transition" id="mode-chill-btn" onclick="setRunnerPreset('chill')">Chill (3.5x)</button><button class="px-2 py-0.5 rounded border border-butter/40 bg-butter/30 text-charcoal dark:text-butter font-mono text-xs font-semibold hover:scale-105 transition ring-2 ring-peach" id="mode-normal-btn" onclick="setRunnerPreset('normal')">Normal (5.0x)</button><button class="px-2 py-0.5 rounded border border-peach/40 bg-peach/25 text-peach-600 dark:text-peach font-mono text-xs font-semibold hover:scale-105 transition" id="mode-turbo-btn" onclick="setRunnerPreset('turbo')">Turbo (7.2x)</button></div><div class="p-2 rounded bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 flex items-center gap-2 text-[11px] font-mono text-charcoal/70 dark:text-ivory/70"><span class="w-2 h-2 rounded-full bg-sage animate-ping"></span><span id="runner-physics-status">Double Jump: Active (2x) • Forgiving Hitboxes</span></div></div></div></div><div class="relative flex flex-col items-center w-full max-w-sm sm:max-w-md"><div class="relative w-full h-36 border-2 border-charcoal dark:border-ivory bg-ivory dark:bg-darkBg overflow-hidden rounded-xl shadow-lg"><canvas class="w-full h-full cursor-pointer select-none" id="mini-game-canvas" onclick="jumpNumiMiniGame()"></canvas><div class="absolute top-2 left-3 font-pixel text-[9px] text-charcoal dark:text-ivory bg-ivory/80 dark:bg-darkBg/80 px-2 py-0.5 rounded border border-charcoal/10 dark:border-white/10">SCORE: <span class="text-peach-600 font-bold" id="game-score">0</span></div><div class="absolute top-2 right-3 font-pixel text-[9px] text-charcoal/70 dark:text-ivory/70">HI: <span id="game-score-top">0</span></div><div class="absolute inset-0 bg-charcoal/80 backdrop-blur-[2px] hidden flex flex-col items-center justify-center text-center p-4" id="game-over-overlay"><div class="font-pixel text-xs text-peach mb-1">GAME OVER! 🦊💥</div><div class="font-mono text-xs text-ivory/80 mb-3">Numi bumped into a rogue pixel bug!</div><button class="pixel-box-sm bg-butter text-charcoal font-pixel text-[9px] px-3.5 py-1.5 rounded hover:bg-butter-500 transition cursor-pointer" onclick="resetOrStartRunner()">PRESS SPACE / CLICK TO RETRY</button></div></div><span class="text-[10px] font-mono text-charcoal/50 dark:text-ivory/50 mt-2">Click arena or press Spacebar to jump</span></div></div></section>
+</main>
+<!-- FOOTER -->
+<footer class="border-t border-charcoal/10 dark:border-white/10 py-10 text-xs font-mono text-charcoal/60 dark:text-ivory/60 transition-colors">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<span>Handcrafted with React &amp; Vite principles by Anum</span>
+<span class="text-peach">•</span>
+<span>Numi the Kitsune companion © 2025</span>
+</div>
+<div class="flex items-center gap-4">
+<span>Konami code active (↑ ↑ ↓ ↓ ← → ← → B A)</span>
+<button class="hover:text-sage transition flex items-center gap-1" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+<span>Top</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-up" aria-hidden="true" class="lucide lucide-arrow-up w-3.5 h-3.5"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg>
+</button>
+</div>
+</div>
+</footer>
+<!-- PROJECT DETAIL MODAL (Pixel Dissolve / Reveal) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-200" id="project-modal">
+<div class="relative w-full max-w-xl p-6 sm:p-8 rounded-2xl border-2 border-charcoal dark:border-ivory bg-ivory dark:bg-darkSurface shadow-2xl transition-transform duration-200 scale-95" id="modal-box">
+<!-- Close button -->
+<button class="absolute top-4 right-4 p-2 text-charcoal dark:text-ivory hover:text-peach transition font-pixel text-xs" onclick="closeProjectModal()">
+        ✕ ESC
+      </button>
+<div class="flex items-center gap-2 text-xs font-pixel text-sage mb-2">
+<span id="modal-tag">SPEC_SHEET</span>
+</div>
+<h3 class="font-heading text-2xl font-bold text-charcoal dark:text-ivory mb-3" id="modal-title">Project Title</h3>
+<p class="text-sm text-charcoal/80 dark:text-ivory/80 leading-relaxed mb-6" id="modal-desc">
+        Detailed technical breakdown and architectural choices.
+      </p>
+<div class="p-4 rounded-lg bg-charcoal/5 dark:bg-white/5 border border-charcoal/10 dark:border-white/10 mb-6 font-mono text-xs space-y-2">
+<div class="text-charcoal/60 dark:text-ivory/60">Core Modules:</div>
+<div class="text-charcoal dark:text-ivory font-semibold" id="modal-modules">• Parser Generator, Lexer, WebAssembly JIT</div>
+<div class="text-charcoal/60 dark:text-ivory/60 pt-2">Key Benchmark:</div>
+<div class="text-sage font-bold" id="modal-metric">60fps DOM render at 100k nodes</div>
+</div>
+<div class="flex items-center justify-end gap-3 pt-4 border-t border-charcoal/10 dark:border-white/10">
+<button class="px-4 py-2 text-xs font-mono rounded hover:bg-charcoal/5 dark:hover:bg-white/5" onclick="closeProjectModal()">
+          Close
+        </button>
+<a class="pixel-box-sm px-4 py-2 text-xs font-heading font-bold bg-sage text-charcoal rounded hover:bg-sage-600 transition" href="https://github.com" id="modal-cta-repo" target="_blank">
+          Open Repository
+        </a>
+</div>
+</div>
+</div>
+<!-- SCRIPT LOGIC: Interactions, Kitsune Numi Behavior, Audio, Canvas, Easter Eggs -->
+<script src="js/main.js"></script>
+<script src="js/enhancements.js"></script><script src="js/minigame.js"></script>
+
+
+
+</body></html>
