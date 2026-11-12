@@ -37,7 +37,7 @@ export const experimentSchema = z.object({
   title: z.string().trim().min(1, 'Title is required').max(200),
   description: z.string().trim().min(1, 'Description is required'),
   status: z.enum(['idea', 'in_progress', 'broken', 'shipped'], {
-    errorMap: () => ({ message: 'Status must be one of: idea, in_progress, broken, shipped' }),
+    message: 'Status must be one of: idea, in_progress, broken, shipped',
   }),
   link: z.string().url('Invalid URL').nullable().optional(),
 });

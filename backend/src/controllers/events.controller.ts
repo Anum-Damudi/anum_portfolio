@@ -15,7 +15,7 @@ export const logEvent = async (
     await prisma.analyticsEvent.create({
       data: {
         type,
-        path,
+        path: path || null,
         date,
       },
     });

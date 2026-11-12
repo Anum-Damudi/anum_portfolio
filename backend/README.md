@@ -85,12 +85,12 @@ cp .env.example .env
 | `NODE_ENV` | Environment (`development`, `production`, `test`) | `development` |
 | `FRONTEND_URL` | Allowed origin for CORS & cookies | `http://localhost:5173` |
 | `DATABASE_URL` | Neon / Supabase PostgreSQL connection string | `postgresql://...` |
-| `ADMIN_EMAIL` | Email for portfolio administrator login | `anum@example.com` |
-| `ADMIN_PASSWORD` | Administrator initial password | `AdminSecure2026!` |
+| `ADMIN_EMAIL` | Email for portfolio administrator login | `damudianum@gmail.com` |
+| `ADMIN_PASSWORD` | Administrator initial password | `@n15$h24Ru40` |
 | `JWT_SECRET` | Secret key for JWT signing (min 16 chars) | `your_secret_key` |
 | `JWT_EXPIRES_IN` | Token duration | `7d` |
 | `RESEND_API_KEY` | Resend API key for contact notifications (optional) | `re_...` |
-| `CONTACT_NOTIFICATION_EMAIL` | Where contact inquiries are delivered | `anum@example.com` |
+| `CONTACT_NOTIFICATION_EMAIL` | Where contact inquiries are delivered | `damudianum@gmail.com` |
 | `FROM_EMAIL` | Verified sender email for Resend | `portfolio@anum.dev` |
 | `LASTFM_API_KEY` | (Optional) Last.fm API key for live music track | `...` |
 | `LASTFM_USERNAME` | (Optional) Last.fm username | `anum` |
