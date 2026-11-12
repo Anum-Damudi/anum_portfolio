@@ -1,0 +1,390 @@
+export const openapiSpec = {
+  openapi: '3.0.3',
+  info: {
+    title: "Anum's Portfolio & Numi Companion API",
+    version: '1.0.0',
+    description:
+      "Production-grade backend API for Anum's computer science portfolio, guestbook, contact form, Numi mascot speech engine, and privacy-preserving analytics.",
+    contact: {
+      name: 'Anum',
+      email: 'anum@example.com',
+    },
+  },
+  servers: [
+    {
+      url: 'http://localhost:5000',
+      description: 'Local development server',
+    },
+  ],
+  components: {
+    securitySchemes: {
+      cookieAuth: {
+        type: 'apiKey' as const,
+        in: 'cookie' as const,
+        name: 'admin_token',
+      },
+      bearerAuth: {
+        type: 'http' as const,
+        scheme: 'bearer',
+        bearerFormat: 'JWT',
+      },
+    },
+    schemas: {
+      ErrorResponse: {
+        type: 'object',
+        properties: {
+          error: {
+            type: 'object',
+            properties: {
+              code: { type: 'string', example: 'VALIDATION_ERROR' },
+              message: { type: 'string', example: 'Invalid request parameters' },
+              details: { type: 'array', items: { type: 'object' } },
+            },
+            required: ['code', 'message'],
+          },
+        },
+      },
+      Project: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          title: { type: 'string', example: 'Algorithmic Trading Bot' },
+          slug: { type: 'string', example: 'algo-trading-bot' },
+          summary: { type: 'string', example: 'High throughput orderbook simulator' },
+          description: { type: 'string' },
+          techStack: {
+            type: 'array',
+            items: { type: 'string' },
+            example: ['TypeScript', 'Node.js', 'Docker'],
+          },
+          liveUrl: { type: 'string', nullable: true },
+          githubUrl: { type: 'string', nullable: true },
+          imageUrl: { type: 'string', nullable: true },
+          featured: { type: 'boolean', default: false },
+          order: { type: 'integer', default: 0 },
+        },
+      },
+      Skill: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          name: { type: 'string', example: 'TypeScript' },
+          category: { type: 'string', example: 'Languages' },
+          level: { type: 'string', example: 'Advanced' },
+          order: { type: 'integer', default: 0 },
+        },
+      },
+      Achievement: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          title: { type: 'string', example: "Dean's Honor List" },
+          description: { type: 'string' },
+          date: { type: 'string', example: 'Fall 2024' },
+          icon: { type: 'string', example: 'award' },
+        },
+      },
+      Experiment: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          title: { type: 'string', example: 'WebAssembly Neural Net' },
+          description: { type: 'string' },
+          status: {
+            type: 'string',
+            enum: ['idea', 'in_progress', 'broken', 'shipped'],
+            example: 'in_progress',
+          },
+          link: { type: 'string', nullable: true },
+        },
+      },
+      Currently: {
+        type: 'object',
+        properties: {
+          learning: { type: 'string', example: 'Distributed consensus algorithms' },
+          building: { type: 'string', example: 'Portfolio backend API' },
+          listeningTo: { type: 'string', example: 'Synthwave & Lo-Fi Beats' },
+          isLiveMusic: { type: 'boolean', example: false },
+          updatedAt: { type: 'string', format: 'date-time' },
+        },
+      },
+      NumiLine: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          section: { type: 'string', example: 'hero' },
+          line: { type: 'string', example: 'Beep boop! All systems operational.' },
+        },
+      },
+      GuestbookEntry: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          name: { type: 'string', example: 'Ada Lovelace' },
+          message: { type: 'string', example: 'Brilliant portfolio!' },
+          status: { type: 'string', enum: ['pending', 'approved', 'rejected'] },
+          createdAt: { type: 'string', format: 'date-time' },
+        },
+      },
+    },
+  },
+  paths: {
+    '/api/health': {
+      get: {
+        summary: 'Uptime & database connectivity check',
+        tags: ['System'],
+        responses: {
+          '200': { description: 'System is healthy' },
+        },
+      },
+    },
+    '/api/projects': {
+      get: {
+        summary: 'Public read-only cached project list',
+        tags: ['Content'],
+        responses: {
+          '200': {
+            description: 'Array of portfolio projects',
+            content: {
+              'application/json': {
+                schema: { type: 'array', items: { $ref: '#/components/schemas/Project' } },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/skills': {
+      get: {
+        summary: 'Public read-only cached skill inventory',
+        tags: ['Content'],
+        responses: {
+          '200': {
+            description: 'Array of skills',
+            content: {
+              'application/json': {
+                schema: { type: 'array', items: { $ref: '#/components/schemas/Skill' } },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/achievements': {
+      get: {
+        summary: 'Public read-only cached achievements',
+        tags: ['Content'],
+        responses: {
+          '200': {
+            description: 'Array of achievements',
+            content: {
+              'application/json': {
+                schema: { type: 'array', items: { $ref: '#/components/schemas/Achievement' } },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/experiments': {
+      get: {
+        summary: 'Public read-only cached experiments & side projects',
+        tags: ['Content'],
+        responses: {
+          '200': {
+            description: 'Array of experiments',
+            content: {
+              'application/json': {
+                schema: { type: 'array', items: { $ref: '#/components/schemas/Experiment' } },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/currently': {
+      get: {
+        summary: 'What Anum is currently learning, building and listening to',
+        tags: ['Widgets'],
+        responses: {
+          '200': {
+            description: 'Currently widget status',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/Currently' },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/numi/lines': {
+      get: {
+        summary: 'Random speech-bubble line for Numi pixel mascot',
+        tags: ['Mascot'],
+        parameters: [
+          {
+            name: 'section',
+            in: 'query',
+            required: false,
+            schema: { type: 'string' },
+            description: 'Portfolio section (hero, projects, skills, contact, guestbook)',
+          },
+        ],
+        responses: {
+          '200': {
+            description: 'Random dialogue line',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/NumiLine' },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/contact': {
+      post: {
+        summary: 'Submit contact form with honeypot & email notification',
+        tags: ['Contact'],
+        requestBody: {
+          required: true,
+          content: {
+            'application/json': {
+              schema: {
+                type: 'object',
+                required: ['name', 'email', 'message'],
+                properties: {
+                  name: { type: 'string', example: 'Jane Doe' },
+                  email: { type: 'string', format: 'email', example: 'jane@example.com' },
+                  message: { type: 'string', example: "Love your projects! Let's connect." },
+                  website: { type: 'string', description: 'Honeypot field (must remain empty)' },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          '201': { description: 'Message submitted successfully' },
+          '400': { $ref: '#/components/schemas/ErrorResponse' },
+          '429': { $ref: '#/components/schemas/ErrorResponse' },
+        },
+      },
+    },
+    '/api/guestbook': {
+      get: {
+        summary: 'Get approved guestbook messages',
+        tags: ['Guestbook'],
+        responses: {
+          '200': {
+            description: 'List of approved guestbook entries',
+            content: {
+              'application/json': {
+                schema: { type: 'array', items: { $ref: '#/components/schemas/GuestbookEntry' } },
+              },
+            },
+          },
+        },
+      },
+      post: {
+        summary: 'Sign guestbook (held as pending for moderation)',
+        tags: ['Guestbook'],
+        requestBody: {
+          required: true,
+          content: {
+            'application/json': {
+              schema: {
+                type: 'object',
+                required: ['name', 'message'],
+                properties: {
+                  name: { type: 'string', example: 'Visitor Name' },
+                  message: { type: 'string', example: 'Great work on the pixel engine!' },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          '201': { description: 'Entry submitted for moderation' },
+          '400': { $ref: '#/components/schemas/ErrorResponse' },
+          '429': { $ref: '#/components/schemas/ErrorResponse' },
+        },
+      },
+    },
+    '/api/events': {
+      post: {
+        summary: 'Log privacy-friendly analytics event',
+        tags: ['Analytics'],
+        requestBody: {
+          required: true,
+          content: {
+            'application/json': {
+              schema: {
+                type: 'object',
+                required: ['type', 'path'],
+                properties: {
+                  type: { type: 'string', enum: ['page_view', 'easter_egg', 'cv_download'] },
+                  path: { type: 'string', example: '/projects/algo-trading-bot' },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          '200': { description: 'Event logged' },
+          '400': { $ref: '#/components/schemas/ErrorResponse' },
+        },
+      },
+    },
+    '/api/cv': {
+      get: {
+        summary: "Download Anum's CV and log cv_download event",
+        tags: ['Resume'],
+        responses: {
+          '200': {
+            description: 'PDF Resume file',
+            content: {
+              'application/pdf': {},
+            },
+          },
+        },
+      },
+    },
+    '/api/admin/auth/login': {
+      post: {
+        summary: 'Admin login (sets httpOnly cookie & returns JWT)',
+        tags: ['Admin Auth'],
+        requestBody: {
+          required: true,
+          content: {
+            'application/json': {
+              schema: {
+                type: 'object',
+                required: ['email', 'password'],
+                properties: {
+                  email: { type: 'string', example: 'anum@example.com' },
+                  password: { type: 'string', example: 'AdminSecure2026!' },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          '200': { description: 'Login successful' },
+          '401': { $ref: '#/components/schemas/ErrorResponse' },
+          '429': { $ref: '#/components/schemas/ErrorResponse' },
+        },
+      },
+    },
+    '/api/admin/stats': {
+      get: {
+        summary: 'Analytics summary with daily totals and top paths',
+        tags: ['Admin Management'],
+        security: [{ cookieAuth: [] }, { bearerAuth: [] }],
+        responses: {
+          '200': { description: 'Analytics statistics' },
+        },
+      },
+    },
+  },
+};

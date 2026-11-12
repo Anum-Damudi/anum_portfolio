@@ -1,0 +1,124 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Admin {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  summary     String
+  description String
+  techStack   String[]
+  liveUrl     String?
+  githubUrl   String?
+  imageUrl    String?
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Skill {
+  id        String   @id @default(cuid())
+  name      String
+  category  String
+  level     String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Achievement {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  date        String
+  icon        String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum ExperimentStatus {
+  idea
+  in_progress
+  broken
+  shipped
+}
+
+model Experiment {
+  id          String           @id @default(cuid())
+  title       String
+  description String
+  status      ExperimentStatus @default(idea)
+  link        String?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+}
+
+model Currently {
+  id          String   @id @default("current")
+  learning    String
+  building    String
+  listeningTo String
+  updatedAt   DateTime @updatedAt
+}
+
+model NumiLine {
+  id        String   @id @default(cuid())
+  section   String
+  line      String
+  createdAt DateTime @default(now())
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+enum GuestbookStatus {
+  pending
+  approved
+  rejected
+}
+
+model GuestbookEntry {
+  id         String          @id @default(cuid())
+  name       String
+  message    String
+  status     GuestbookStatus @default(pending)
+  approvedAt DateTime?
+  createdAt  DateTime        @default(now())
+}
+
+enum AnalyticsType {
+  page_view
+  easter_egg
+  cv_download
+}
+
+model AnalyticsEvent {
+  id        String        @id @default(cuid())
+  type      AnalyticsType
+  path      String
+  date      String
+  createdAt DateTime      @default(now())
+
+  @@index([date, type])
+}
